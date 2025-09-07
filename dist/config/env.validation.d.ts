@@ -1,0 +1,35 @@
+import { z } from 'zod';
+declare const envSchema: z.ZodObject<{
+    PORT: z.ZodPipe<z.ZodString, z.ZodTransform<number, string>>;
+    FRONTEND_ORIGIN: z.ZodString;
+    SUPABASE_URL: z.ZodString;
+    SUPABASE_SERVICE_ROLE_KEY: z.ZodString;
+    SUPABASE_ANON_KEY: z.ZodString;
+    SUPABASE_JWT_SECRET: z.ZodString;
+    LINE_LOGIN_CHANNEL_ID: z.ZodString;
+    LINE_LOGIN_CHANNEL_SECRET: z.ZodString;
+    LIFF_ID: z.ZodString;
+    LINE_MESSAGING_CHANNEL_ID: z.ZodString;
+    LINE_MESSAGING_CHANNEL_SECRET: z.ZodString;
+    LINE_MESSAGING_ACCESS_TOKEN: z.ZodString;
+    RECEIPT_BASE_URL: z.ZodString;
+    BOOKING_TIMEBLOCK_MINUTES: z.ZodPipe<z.ZodString, z.ZodTransform<number, string>>;
+}, z.core.$strip>;
+export type EnvConfig = z.infer<typeof envSchema>;
+export declare function validate(config: Record<string, unknown>): {
+    PORT: number;
+    FRONTEND_ORIGIN: string;
+    SUPABASE_URL: string;
+    SUPABASE_SERVICE_ROLE_KEY: string;
+    SUPABASE_ANON_KEY: string;
+    SUPABASE_JWT_SECRET: string;
+    LINE_LOGIN_CHANNEL_ID: string;
+    LINE_LOGIN_CHANNEL_SECRET: string;
+    LIFF_ID: string;
+    LINE_MESSAGING_CHANNEL_ID: string;
+    LINE_MESSAGING_CHANNEL_SECRET: string;
+    LINE_MESSAGING_ACCESS_TOKEN: string;
+    RECEIPT_BASE_URL: string;
+    BOOKING_TIMEBLOCK_MINUTES: number;
+};
+export {};

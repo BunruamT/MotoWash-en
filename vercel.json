@@ -1,0 +1,31 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "dist/main.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "dist/main.js"
+    }
+  ],
+  "env": {
+    "PORT": "4000",
+    "FRONTEND_ORIGIN": "https://motowash-front.vercel.app",
+    "SUPABASE_URL": "https://tpbpssyyvqfwcaunqucc.supabase.co",
+    "SUPABASE_SERVICE_ROLE_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRwYnBzc3l5dnFmd2NhdW5xdWNjIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc1NzI2MDAxNSwiZXhwIjoyMDcyODM2MDE1fQ.5SEgeP4NfRYjPRu9uoGeAIJr_WJxFMoniy_n4gQLK4s",
+    "SUPABASE_ANON_KEY": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRwYnBzc3l5dnFmd2NhdW5xdWNjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTcyNjAwMTUsImV4cCI6MjA3MjgzNjAxNX0.nECgonQ7mnT6x0F38frjNQcyeSNNhh0VbszMcowz7LI",
+    "SUPABASE_JWT_SECRET": "v7ds8w0BUuByuWVRN5TiNeDP2Y38pvrk7Ec+2xuBurledZ7xFrcXY9dP9wjHyuKWnOYIxzOYAI4v6M1Ezsd9gA==",
+    "LINE_LOGIN_CHANNEL_ID": "2008070045",
+    "LINE_LOGIN_CHANNEL_SECRET": "9b611a41dc0b397d7929f3a595c429b1",
+    "LIFF_ID": "2008070087-A60Oam01",
+    "LINE_MESSAGING_CHANNEL_ID": "2008070045",
+    "LINE_MESSAGING_CHANNEL_SECRET": "9b611a41dc0b397d7929f3a595c429b1",
+    "LINE_MESSAGING_ACCESS_TOKEN": "EpAPRJNn5l/3yqsqyQ82KzvofFR35mGecdDXoqolvn6A4eEbKhNTsvECBqYyM32HbMknGtJninoyzh+Fcf6s/sGEAGpcBQm3wS9Oya2pgv3Aui9u5ZT4JvpiYmdP0JZ6r/FTn/STn+711yfCjc9bIQdB04t89/1O/w1cDnyilFU=",
+    "RECEIPT_BASE_URL": "https://motowash-back.vercel.app/receipts",
+    "BOOKING_TIMEBLOCK_MINUTES": "60"
+  }
+}
